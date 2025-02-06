@@ -90,11 +90,11 @@ const config = {
             items: [
               {
                 label: 'FAQ',
-                to: 'http://localhost:3000/docs/category/faq/',
+                to: 'http://docs.nerite.org/docs/category/faq/',
               },
               {
                 label: 'Technical Documentation',
-                to: 'http://localhost:3000/docs/category/technical-documentation/',
+                to: 'http://docs.nerite.org/docs/category/technical-documentation/',
               },
             ],
           },
