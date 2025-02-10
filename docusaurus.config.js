@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Nerite',
-  tagline: 'Snail power',
+  title: 'Nerite Protocol Documentation',
+  tagline: 'Go Slow.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -63,9 +63,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Nerite',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Nerite Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -89,8 +89,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'FAQ',
-                to: 'http://docs.nerite.org/docs/category/faq/',
+                label: 'User Docs',
+                to: 'http://docs.nerite.org/docs/category/user-docs/',
               },
               {
                 label: 'Technical Documentation',
