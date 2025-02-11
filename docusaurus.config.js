@@ -15,14 +15,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://neriteorg.github.io',
+  url: 'docs.nerite.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'NeriteOrg', // Usually your GitHub org/user name.
-  projectName: 'neriteorg.github.io', // Usually your repo name.
+  organizationName: 'cupojoseph', // Usually your GitHub org/user name.
+  projectName: 'nerite-docs', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
@@ -47,7 +47,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/NeriteOrg/neriteorg.github.io',
+            'https://github.com/cupojoseph/nerite-docs',
         },
         theme: {
           customCss: './src/css/custom.css',
