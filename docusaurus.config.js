@@ -23,9 +23,9 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'NeriteOrg', // Usually your GitHub org/user name.
-  projectName: 'nerite-docs', // Usually your repo name.
+  projectName: 'neriteorg.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
-  trailingSlash: true,
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
