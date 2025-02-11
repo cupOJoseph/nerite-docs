@@ -18,12 +18,12 @@ const config = {
   url: 'https://docs.nerite.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/nerite-docs',
+  baseUrl: '/neriteorg.github.io/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'NeriteOrg', // Usually your GitHub org/user name.
-  projectName: 'nerite-docs', // Usually your repo name.
+  projectName: 'neriteorg.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
@@ -48,7 +48,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/NeriteOrg/nerite-docs',
+            'https://github.com/NeriteOrg/neriteorg.github.io',
         },
         theme: {
           customCss: './src/css/custom.css',
