@@ -31,6 +31,8 @@ The percentage of fees that are directed to the stability pool can NOT be change
 ### Arbitrum Network
 Arbitrum is a decentralized network, but still relies on an emergency upgrade mechanism. For more information on this, see the [L2 Beat](https://l2beat.com/scaling/projects/arbitrum) tracker for Arbitrum decentralization.
 
+Sequencer Down-time: While the Arbitrum transaction Sequencer has had 100% historic uptime, any down time of the sequencer could cause value leakage and additional risk. L2 transactions can be forced through via L1 in the case of downtime, however stale oracle prices could leak value or lead to bad debt in the protocol.
+
 ### Collaterals
 
 It is possible that some collateral tokens could be upgraded by respective DAOs or groups in the future. Conservative debt limits and over-collateralization ratios have been chosen to limit risks of this posing any issues.
