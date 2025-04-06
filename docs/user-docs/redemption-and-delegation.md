@@ -8,13 +8,13 @@ sidebar_position: 4
 
 Redemptions serve the crucial purpose of keeping USDN pegged to the value of a dollar, creating a price floor around $0.9945. They do this in a decentralized way without reliance on centralized assets, oracles, or 3rd parties.
 
-A redemption is essentially swapping USDN for ETH/LST at face value, as if 1 USDN is exactly worth $1. Redemptions can be initiated by anyone, but are only profitable when USDN <$1.&#x20;
+A redemption is essentially swapping USDN for ETH/LST at face value, as if 1 USDN is exactly worth $1. Redemptions can be initiated by anyone, but are only profitable when USDN <$1.
 
 The redeemer sends USDN to the protocol and in return  gets a mix of WETH, wstETH and rETH (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [link](redemptions-and-delegation.md#docs-internal-guid-6cda6d73-7fff-78b8-1c4f-6cb96385a98a) for more info).
 
 <figure><img src="/static/img/light - BOLD individual redemption.png" alt=""><figcaption></figcaption></figure>
 
-Redemptions start from the borrower paying the least interest.&#x20;
+Redemptions start from the borrower paying the least interest.
 
 Read more about how to [protect yourself ](redemptions-and-delegation.md#how-can-i-stay-protected)from redemptions and what happens if [you are redeemed](redemptions-and-delegation.md#what-happens-if-my-trove-gets-redeemed).
 
@@ -59,7 +59,7 @@ In this example, the rETH market shows a full redemption of the first Trove and 
 
 ### How is the collateral split determined?
 
-The split is dynamic, optimizing for the economic safety of the system. The logic is straightforward: the riskier a collateral is, the more redemption volume is directed to that market. In other words, if a market's Stability Pool is relatively small compared to its total debt, it's considered riskier, as there's a higher likelihood of bad debt occurring in extreme events.&#x20;
+The split is dynamic, optimizing for the economic safety of the system. The logic is straightforward: the riskier a collateral is, the more redemption volume is directed to that market. In other words, if a market's Stability Pool is relatively small compared to its total debt, it's considered riskier, as there's a higher likelihood of bad debt occurring in extreme events.
 
 To mitigate this risk, the system redeems proportionally to the "outside debt" of each collateral type. This is calculated as the total debt borrowed against a specific collateral minus the size of the Stability Pool for that borrowing market.
 
@@ -95,23 +95,23 @@ This means that 41M USDN must be removed from the system before it would reach y
 
 For example, if only 200K USDN were redeemed in the last week, you're comparatively safer than if 15M were redeemed. 
 
-**The price of USDN** is the second crucial factor. When it trades above $1, redemptions become unprofitable and should cease. If demand for USDN is strong, it can maintain a price above $1 for an extended period, as was often the case for LUSD.&#x20;
+**The price of USDN** is the second crucial factor. When it trades above $1, redemptions become unprofitable and should cease. If demand for USDN is strong, it could maintain a price above $1 for an extended period.
 
 During such times, you can comfortably reduce the interest rate you're paying without increasing your risk of redemption.
 
 ### What is delegation of interest rates?
 
-Interest rate delegation is a feature in Liquity V2 that allows borrowers to delegate the management of their interest rate to a third party. This enables them to create a passive, hands-off position, while still keeping a competitive rate and low redemption risk.&#x20;
+Interest rate delegation is a feature in Liquity V2 that allows borrowers to delegate the management of their interest rate to a third party. This enables them to create a passive, hands-off position, while still keeping a competitive rate and low redemption risk.
 
 There are three types of delegations:
 
 * To a third party manager: A specialized entity which provides predetermined strategies for batches of multiple Troves and charges a fee for the service
-* To an automated and decentralized contract strategy: A predefined strategy managing interest rates in an autonomous manner&#x20;
+* To an automated and decentralized contract strategy: A predefined strategy managing interest rates in an autonomous manner
 * To your own wallet: Delegate to a hot wallet when on vacation, or to a friend
 
 It is important to note that a delegate or contract strategy can do nothing else but set the interest rate in a predetermined range, significantly limiting the risks of the borrowers.
 
-Borrowers should thus keep an eye on the interest rate range and the maximum update frequency (relevant in case of premature adjustments) preset by the manager.&#x20;
+Borrowers should thus keep an eye on the interest rate range and the maximum update frequency (relevant in case of premature adjustments) preset by the manager.
 
 ### Who are the current active interest rate delegates? <a href="#docs-internal-guid-441d8c3f-7fff-4efa-6319-4ba00d908597" id="docs-internal-guid-441d8c3f-7fff-4efa-6319-4ba00d908597"></a>
 

@@ -56,7 +56,7 @@ This depends on your personal preferences, primarily your risk tolerance and how
 :::tip
 We may display BOLD instead of USDN in several graphics which are borrowed from Liquity.
 
-<figure><img src="/static/img/ltv_preset.png" alt=""><figcaption><p>LTV quick-selection options</p></figcaption></figure>
+<figure><img src="/static/img/ltv_preset.png" alt=""></img><figcaption><p>LTV quick-selection options</p></figcaption></figure>
 
 Please note that these examples are for illustration purposes only and do not represent definitive risk or safety thresholds. It's essential to determine your own risk tolerance and comfort level as a user.
 
@@ -77,7 +77,7 @@ A special case is when a Redistribution is necessary, then:
 * For ETH, the loss amounts to 10% of the debt (at most). That corresponds to a max. loss of 9.09% expressed in terms of collateral.
 * For rETH/wstETH the loss is 20% of the debt, corresponding to a max. loss of 16.67% expressed in terms of collateral.
 
-<figure><img src="/static/img/liqtable.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/static/img/liqtable.png" alt=""></img><figcaption></figcaption></figure>
 
 ### How am I compensated for liquidating a Trove? 
 
@@ -131,7 +131,7 @@ Since redemptions are performed in ascending order of interest rate (for the res
 
 You can see the distribution of other users’ rates in a histogram and position yourself accordingly.
 
-<figure><img src="/static/img/rerwere.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/static/img/rerwere.png" alt=""></img><figcaption></figcaption></figure>
 
 Redemptions usually occur when USDN is trading below $1 minus the current redemption fee. Keeping an eye on the past [redemption activity](https://dune.com/liquity/liquity-v2#redemptions) can help you assess the overall redemption risk, serving as an additional data point for your rate selection.
 
@@ -152,7 +152,7 @@ There are two key parameters to consider:
 
 You have the flexibility to set these parameters as you see fit, allowing you to control the relative riskiness of each Trove. You can create multiple Troves under the same address, enabling you to manage different risk profiles for different portions of your portfolio.
 
-<figure><img src="/static/img/Loan personas.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/static/img/Loan personas.png" alt=""></img><figcaption></figcaption></figure>
 
 ### Are there any other fees related to borrowing?
 
@@ -184,7 +184,7 @@ Risks are mitigated through temporary borrowing restrictions in times of low col
 
 Keep in mind that despite all these measures, USDN remains dependent on the three mentioned collateral assets and there is no strict guarantee that it remains overcollateralized in case of a sudden collapse of a collateral asset.
 
-### How does the system compartmentalize risk among different LSTs? <a href="#docs-internal-guid-b8850ae5-7fff-85e0-0aa6-e8661f89caa8" id="docs-internal-guid-b8850ae5-7fff-85e0-0aa6-e8661f89caa8"></a>
+### How does the system compartmentalize risk among different LSTs? 
 
 This depends on the party in question:
 
@@ -201,7 +201,7 @@ The liquidator can freely choose between two fallback liquidation modes for the 
 1. Just-in-time (JIT) liquidation: the liquidator sends an amount of USDN corresponding to the (remaining) debt in exchange for 105% of its nominal value in (staked) ETH.
 2. Redistribution: the liquidator triggers a redistribution, through which the Trove’s entire debt and collateral is redistributed to all fellow borrowers of the respective collateral market, in proportion to their own collateral amounts. Thus, the respective borrowers will receive a share of the liquidated collateral and see their debts increase proportionally.
 
-### Why was the Recovery Mode removed? <a href="#docs-internal-guid-fee4cc44-7fff-c866-9ccf-bac2da1b5222" id="docs-internal-guid-fee4cc44-7fff-c866-9ccf-bac2da1b5222"></a>
+### Why was the Recovery Mode removed? 
 
 The removal of Recovery Mode in V2 ensures that borrowers can benefit from a permanently high LTV regardless of the system state, and up to 11x multiplication.
 
