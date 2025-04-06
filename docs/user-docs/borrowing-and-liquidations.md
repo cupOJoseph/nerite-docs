@@ -109,7 +109,7 @@ In Liquity V2, users can set their own interest rates, giving them full control 
 
 User-set interest rates facilitate a capital-efficient equilibrium between USDN borrowers and holders in a fully market-driven manner. Additionally, these rates serve as the primary revenue source for USDN holders, generating a continuous, sustainable real yield for USDN depositors and liquidity providers.
 
-Borrowers should set their rates based on their [redemption](redemptions-and-delegation.md#what-are-redemptions) risk tolerance.
+Borrowers should set their rates based on their [redemption](/docs/user-docs/redemption-and-delegation#what-are-redemptions) risk tolerance.
 
 Read more about setting your rates [here](https://www.liquity.org/blog/interest-rate-management-in-liquity-v2).
 
@@ -121,15 +121,15 @@ Note however, that a fee corresponding to 7 days of average interest is charged 
 
 ### How do I decide on the right rate for me?
 
-Setting an interest rate determines a user’s redemption risk and needs to be aligned with your goals and how actively you want to manage your position.
+Setting an interest rate determines a user's redemption risk and needs to be aligned with your goals and how actively you want to manage your position.
 
-Users can also  decide to delegate interest rate management to a third party, who can set your interest rate and charge a fee for this service (see [link](redemptions-and-delegation.md#what-is-delegation-of-interest-rates)).
+Users can also  decide to delegate interest rate management to a third party, who can set your interest rate and charge a fee for this service (see [link](/docs/user-docs/redemption-and-delegation#what-is-delegation-of-interest-rates)).
 
 By opting to manage your own rate, you will have to weigh the savings from a lower rate against the higher redemption risk and the increased adjustment frequency with potential additional costs (premature adjustment fees and gas costs).
 
 Since redemptions are performed in ascending order of interest rate (for the respective collateral asset), you will typically want to keep a buffer of other borrowers with lower rates in front of you. Choosing higher rates may increase the recurring costs of your loan, but give you peace of mind regarding unexpected market fluctuations.
 
-You can see the distribution of other users’ rates in a histogram and position yourself accordingly.
+You can see the distribution of other users' rates in a histogram and position yourself accordingly.
 
 <figure><img src="/static/img/rerwere.png" alt=""></img><figcaption></figcaption></figure>
 
@@ -141,14 +141,14 @@ In general, those willing to actively monitor their positions, or borrowing for 
 
 These will be set, continuously, by the market and will vary over time. We would expect that, on average, rates should be similar to borrowing on Sky or Aave using ETH or staked ETH. However, due to the flexibility of user-set rates, it is possible that some users will pay significantly lower rates during certain periods.&#x20;
 
-Given that 75% of the interest revenue is directly paid out to USDN depositors , we further expect that stablecoin deposit yields should be comparable, if not higher than what competing CDP’s and lending markets offer. Thanks to the attractiveness of USDN and assuming the emergence of external use cases (monetary premium), this could lead to lower borrow rates overall than offered by other platforms. Learn more about the spread between borrowers and lenders in our [article](https://www.liquity.org/blog/liquity-v2-a-de-facto-reference-rate-for-defi).
+Given that 75% of the interest revenue is directly paid out to USDN depositors , we further expect that stablecoin deposit yields should be comparable, if not higher than what competing CDP's and lending markets offer. Thanks to the attractiveness of USDN and assuming the emergence of external use cases (monetary premium), this could lead to lower borrow rates overall than offered by other platforms. Learn more about the spread between borrowers and lenders in our [article](https://www.liquity.org/blog/liquity-v2-a-de-facto-reference-rate-for-defi).
 
 ### What determines the riskiness of my Trove?
 
 There are two key parameters to consider:
 
 * **Loan-to-value (LTV)**: This is based on your debt-to-collateral ratio and affects your risk of [liquidation](borrowing-and-liquidations.md#how-do-liquidations-work-in-liquity-v2).
-* **Interest rate (IR)**: You set this rate yourself, and it influences your risk of being [redeemed](redemptions-and-delegation.md#what-are-redemptions).
+* **Interest rate (IR)**: You set this rate yourself, and it influences your risk of being [redeemed](/docs/user-docs/redemption-and-delegation#what-are-redemptions).
 
 You have the flexibility to set these parameters as you see fit, allowing you to control the relative riskiness of each Trove. You can create multiple Troves under the same address, enabling you to manage different risk profiles for different portions of your portfolio.
 
@@ -156,7 +156,7 @@ You have the flexibility to set these parameters as you see fit, allowing you to
 
 ### Are there any other fees related to borrowing?
 
-To impede Trove redemption evasion strategies where borrowers try to minimize their interest payments in an unfair manner, a small “premature adjustment fee” is charged on interest rate changes that happen within less than 7 days since the last adjustment (or the opening of the Trove). The premature adjustment fee is equal to 7 days of average interest on the respective borrow market. Note that this fee differs from the user’s set interest rate.&#x20;
+To impede Trove redemption evasion strategies where borrowers try to minimize their interest payments in an unfair manner, a small "premature adjustment fee" is charged on interest rate changes that happen within less than 7 days since the last adjustment (or the opening of the Trove). The premature adjustment fee is equal to 7 days of average interest on the respective borrow market. Note that this fee differs from the user's set interest rate.&#x20;
 
 The fee is denominated in UDSN and added to the Trove's debt. The same fee is charged when a new Trove is opened or when its debt is increased (only affecting the added debt).
 
@@ -168,7 +168,7 @@ You can have multiple open Troves for the same collateral or across different co
 
 Yes, they are represented as a NFT (ERC-721), hence easily transferable between wallets. When you send the NFT you also send full access to your Trove and all the funds within it.&#x20;
 
-Please note that more advanced strategies like ‘selling’ Trovess on secondary markets like OpenSea comes with inherent risks, and caution is advised.
+Please note that more advanced strategies like 'selling' Trovess on secondary markets like OpenSea comes with inherent risks, and caution is advised.
 
 ### How do I loop my exposure?
 
@@ -188,18 +188,18 @@ Keep in mind that despite all these measures, USDN remains dependent on the thre
 
 This depends on the party in question:
 
-* Borrowers: Collateral risk is limited to the collateral asset held by the borrower. A borrower isn’t negatively affected by a failure of another collateral asset.
+* Borrowers: Collateral risk is limited to the collateral asset held by the borrower. A borrower isn't negatively affected by a failure of another collateral asset.
 * USDN Holders: As a multi-collateral stablecoin, USDN is reliant on effective liquidations of undercollateralized loans in every borrow market to remain overcollateralized. Holders are subject to the risks of all supported collateral assets.
 * Earners: Stability Pool depositors only get exposure to the asset they have opted for. However, as USDN holders, they are similarly affected by potential depegging.
 
 ### What mechanisms are in place if the Stability Pool is empty?
 
-If the Stability Pool doesn’t cover the full entire debt and gets completely emptied by the liquidation, the system falls back to the following liquidations modes.
+If the Stability Pool doesn't cover the full entire debt and gets completely emptied by the liquidation, the system falls back to the following liquidations modes.
 
 The liquidator can freely choose between two fallback liquidation modes for the debt exceeding the funds in the Stability Pool:
 
 1. Just-in-time (JIT) liquidation: the liquidator sends an amount of USDN corresponding to the (remaining) debt in exchange for 105% of its nominal value in (staked) ETH.
-2. Redistribution: the liquidator triggers a redistribution, through which the Trove’s entire debt and collateral is redistributed to all fellow borrowers of the respective collateral market, in proportion to their own collateral amounts. Thus, the respective borrowers will receive a share of the liquidated collateral and see their debts increase proportionally.
+2. Redistribution: the liquidator triggers a redistribution, through which the Trove's entire debt and collateral is redistributed to all fellow borrowers of the respective collateral market, in proportion to their own collateral amounts. Thus, the respective borrowers will receive a share of the liquidated collateral and see their debts increase proportionally.
 
 ### Why was the Recovery Mode removed? 
 

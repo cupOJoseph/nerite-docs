@@ -8,15 +8,18 @@ sidebar_position: 4
 
 Redemptions serve the crucial purpose of keeping USDN pegged to the value of a dollar, creating a price floor around $0.9945. They do this in a decentralized way without reliance on centralized assets, oracles, or 3rd parties.
 
-A redemption is essentially swapping USDN for ETH/LST at face value, as if 1 USDN is exactly worth $1. Redemptions can be initiated by anyone, but are only profitable when USDN <$1.
+A redemption is essentially swapping USDN for ETH/LST at face value, as if 1 USDN is exactly worth $1.00. Redemptions can be initiated by anyone, but are only profitable when USDN is less than $1.
 
-The redeemer sends USDN to the protocol and in return  gets a mix of WETH, wstETH and rETH (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [link](redemptions-and-delegation.md#docs-internal-guid-6cda6d73-7fff-78b8-1c4f-6cb96385a98a) for more info).
+The redeemer sends USDN to the protocol and in return  gets a mix of WETH, wstETH and rETH (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [link](#how-is-the-collateral-split-determined) for more info).
 
-<figure><img src="/static/img/light - BOLD individual redemption.png" alt=""><figcaption></figcaption></figure>
+<figure>
+  <img src="/static/img/light - BOLD individual redemption.png" alt="" />
+  <figcaption></figcaption>
+</figure>   
 
 Redemptions start from the borrower paying the least interest.
 
-Read more about how to [protect yourself ](redemptions-and-delegation.md#how-can-i-stay-protected)from redemptions and what happens if [you are redeemed](redemptions-and-delegation.md#what-happens-if-my-trove-gets-redeemed).
+Read more about how to [protect yourself](#how-can-i-stay-protected) from redemptions and what happens if [you are redeemed](#what-happens-if-my-trove-gets-redeemed).
 
 You can also watchi this [9 min video](https://www.youtube.com/watch?v=CQVmjFx987A) on redemptions.
 
@@ -45,7 +48,7 @@ Example with ETH at $3'000:
 
 You can see your collateral and debt reduced equally (in USD terms) and the redemption fee (0.025 ETH) being added to your collateral value.
 
-Partially affected Troves whose debt stays above the minimum debt threshold of 2000 USDN continue to work as before, while Troves whose debt is reduced to a lesser amount (or 0) switch to a dormant operating mode (see below for [more](redemptions-and-delegation.md#docs-internal-guid-927901d5-7fff-c7a0-2e9f-964ab271257a) info).
+Partially affected Troves whose debt stays above the minimum debt threshold of 2000 USDN continue to work as before, while Troves whose debt is reduced to a lesser amount (or 0) switch to a dormant operating mode (see below for [more](#what-happens-when-redemptions-cause-a-debt-of-a-trove-to-fall-below-the-minimum-amount) info).
 
 ### How do redemptions work using three collateral assets? <a href="#docs-internal-guid-6cda6d73-7fff-78b8-1c4f-6cb96385a98a" id="docs-internal-guid-6cda6d73-7fff-78b8-1c4f-6cb96385a98a"></a>
 
@@ -55,7 +58,7 @@ The process starts with the Troves paying the lowest interest rates in each coll
 
 In this example, the rETH market shows a full redemption of the first Trove and a partial redemption of the second. The wstETH and ETH markets have one partial and two full redemptions, respectively
 
-<figure><img src="/static/img/assets/redemption split 2.png" alt=""><figcaption><p>Example redemption across all three collateral markets</p></figcaption></figure>
+<figure><img src="/static/img/assets/redemption split 2.png" alt=""></img><figcaption><p>Example redemption across all three collateral markets</p></figcaption></figure>
 
 ### How is the collateral split determined?
 
@@ -67,7 +70,7 @@ Here is an example: given outside debt amounts of 100 USDN, 50 USDN and 100 USDN
 
 
 
-<figure><img src="/static/img/assets/redeem2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/static/img/assets/redeem2.png" alt=""></img><figcaption></figcaption></figure>
 
 ### Is there a redemption fee?
 
@@ -79,7 +82,7 @@ Upon each redemption of x USDN: `baseRate` is decayed based on time passed since
 
 The redemption fee percentage is given by `min (0.5%  + baseRate, 100%)`.
 
-<figure><img src="/static/img/assets/redem.png" alt=""><figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
+<figure><img src="/static/img/assets/redem.png" alt=""></img><figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
 
 ### How can I stay protected?
 
@@ -89,7 +92,7 @@ The risk of redemption depends on two factors: the interest rate you set and the
 
 You can see this on any frontned, in the example below the number is 41M.
 
-<figure><img src="/static/img/assets/rerwere.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/static/img/assets/rerwere.png" alt=""></img><figcaption></figcaption></figure>
 
 This means that 41M USDN must be removed from the system before it would reach you. However, this number is relative, and you also need to consider recent redemption activity. While past events don't guarantee future outcomes, they can serve as a useful guide.
 
@@ -125,23 +128,22 @@ Coming soon.
 
 _Note that Liquity AG is not responsible for the actions of any delegates. Please do your own research._
 
-### What happens if there are issues with the smart contract for delegating interest rates? <a href="#docs-internal-guid-441d8c3f-7fff-4efa-6319-4ba00d908597" id="docs-internal-guid-441d8c3f-7fff-4efa-6319-4ba00d908597"></a>
+### What happens if there are issues with the smart contract for delegating interest rates? 
 
 Your Trove would not be affected - the only thing would get affected is the interest rate at which your position is set.
 
-### Why are redemptions not a feature of both LTV & interest rate, but only interest rate? <a href="#docs-internal-guid-61a948e4-7fff-84a3-24cb-31bc5739c81a" id="docs-internal-guid-61a948e4-7fff-84a3-24cb-31bc5739c81a"></a>
+### Why are redemptions not a feature of both LTV & interest rate, but only interest rate? 
 
-Given that the _raison d’etre_ for redemptions is to diminish USDN supply in response to reduced demand, and interest rates drive demand, rate-based redemption processing is a more sustainable and effective lever to reach market equilibrium. Actively managing for both interest rate and LTV would weaken the ability to enforce market-level interest rates and deposit yields, while complicating the process for the system and its users
+Given that the _raison d'etre_ for redemptions is to diminish USDN supply in response to reduced demand, and interest rates drive demand, rate-based redemption processing is a more sustainable and effective lever to reach market equilibrium. Actively managing for both interest rate and LTV would weaken the ability to enforce market-level interest rates and deposit yields, while complicating the process for the system and its users
 
-### What’s the difference in redemption fees charged between V1 and V2? <a href="#docs-internal-guid-4440bcbf-7fff-0c72-e325-8068a857d979" id="docs-internal-guid-4440bcbf-7fff-0c72-e325-8068a857d979"></a>
-
+### What's the difference in redemption fees charged between Liquity V1 and V2? 
 In v2, when borrowers are affected by redemptions, the redemption fee charged to the redeemer stays within the affected Troves instead of being diverted as in Liquity.
 
-So, in Liquity the `borrower_loss = redemption_fee + redeemer_gain`, while in Bold it’s `borrower_loss = redeemer_gain`.
+So, in Liquity the `borrower_loss = redemption_fee + redeemer_gain`, while in Bold it's `borrower_loss = redeemer_gain`.
 
-### What happens when redemptions cause a debt of a Trove to fall below the minimum amount? <a href="#docs-internal-guid-927901d5-7fff-c7a0-2e9f-964ab271257a" id="docs-internal-guid-927901d5-7fff-c7a0-2e9f-964ab271257a"></a>
+### What happens when redemptions cause a debt of a Trove to fall below the minimum amount?
 
-If the redeemed amount exceeds the debt of an affected Trove, it doesn’t get closed as in Liquity V1, but remains open with 0 USDN debt and the remaining collateral. The owner of a fully redeemed Trove may close it by withdrawing the remaining collateral, or borrow anew to bring its debt above the minimum of 2000 USDN, topping up its collateral if needed.
+If the redeemed amount exceeds the debt of an affected Trove, it doesn't get closed as in Liquity V1, but remains open with 0 USDN debt and the remaining collateral. The owner of a fully redeemed Trove may close it by withdrawing the remaining collateral, or borrow anew to bring its debt above the minimum of 2000 USDN, topping up its collateral if needed.
 
 In the scenario that the redeemed amount of a Trove does not exceed the debt of a Trove, but would leave it between 0 and 2000 USDN, the Trove would remain open with the remaining debt, and the remaining collateral. The owner of the Trove may close it by paying off the remaining debt and withdrawing the remaining collateral, or borrow anew as described above.
 
@@ -151,17 +153,17 @@ In the scenario that the redeemed amount of a Trove does not exceed the debt of 
 
 To redeem USDN you first have to give the CollateralRegistry contract an approval to use your USDN using the approve() function of the USDN token contract.
 
-After connecting your wallet through `“Connect to Web3”`, set\
+After connecting your wallet through "Connect to Web3", set\
 spender to `CollateralRegistry address`and the amount to be at least as high as the amount you wish to redeem, adding 18 zeros.
 
 **Example for 1000 USDN:**
 
-<figure><img src="/static/img/assets/red1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/static/img/assets/red1.png" alt=""></img><figcaption></figcaption></figure>
 
 **Step 2**\
 You can now redeem USDN using the `CollateralRegistry` contract:
 
-[<<insert CollateralRegistry address after deployment>>](#)Simply input the USDN amount to redeem, the redemption fee percentage you are willing to accept and the maximum number of list iterations per collateral (limits the number of troves whose debt can be repaid on each branch).
+[(insert CollateralRegistry address after deployment)](#)Simply input the USDN amount to redeem, the redemption fee percentage you are willing to accept and the maximum number of list iterations per collateral (limits the number of troves whose debt can be repaid on each branch).
 
 Note: The redemption fee must be higher than the current fee.
 
@@ -173,4 +175,4 @@ Note: The redemption fee must be higher than the current fee.
 
 `_maxFeePercentage:` 1% \* 1e16, i.e. 1000000000000000000
 
-<figure><img src="/static/img/red2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/static/img/red2 (1).png" alt=""></img><figcaption></figcaption></figure>
