@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ### What is USDN?
 
-USDN is the USD-pegged stablecoin issued by the Nerite protocol. It’s decentralized, overcollateralized, and backed only by a basket of crypto native assets.
+USDN is the USD-pegged stablecoin issued by the Nerite protocol. It's decentralized, overcollateralized, and backed only by a basket of crypto native assets.
 
 USDN is a resilient stablecoin by design:
 
@@ -24,7 +24,7 @@ USDN is a resilient stablecoin by design:
 * USDN is a streamable super-token, making it perfect for subscriptions, money streaming, annuities, and other specialized use cases.
 * USDN is Arbitrum native, and is built specifically for the fast and cheap Arbitrum network.
 
-### What is USDN’s peg mechanism?
+### What is USDN's peg mechanism?
 
 Nerite uses Liquity V2's market-driven monetary policy through user-set interest rates to maintain USDN's peg and to dynamically respond to situations where the token is above or below $1.00.
 
@@ -32,7 +32,10 @@ When USDN trades above $1, borrowers tend to reduce their rates due to lower red
 
 In contrast, when USDN trades below $1, arbitrageurs will initiate redemptions to restore the peg. Borrowers' exposure to redemption risk prompts them to increase interest rates, boosting demand for USDN (and Earn deposits) and pushing its price upward.
 
-<figure><img src="/static/img/assets/light - USDN peg mechanism.png" alt=""><figcaption></figcaption></figure>
+<figure>
+  <img src="/static/img/light - BOLD individual redemption.png" alt="" />
+  <figcaption></figcaption>
+</figure>
 
 ### How can I earn yield with Nerite?
 
@@ -48,7 +51,7 @@ The yield comes from three sources:
 2. **Liquidation fees**: Your USDN will be used to liquidate under-collateralized loans, effectively buying their collateral with a \~5% discount. This is paid out in (staked) ETH.
 3. **Inflationary Incentives**: NERI tokens are added as a bonus inflationary reward to depositors.
 
-All the yield is fully sustainable, scalable and “real”, with no token emissions and lockups.
+All the yield is fully sustainable, scalable and "real", with no token emissions and lockups.
 
 ### Is there a lockup period? 
 
@@ -56,7 +59,7 @@ There is no lockup period. Users are free to withdraw their USDN deposits from t
 
 ### What is the estimated yield on Earn? 
 
-The yield is a representation of the rates borrowers are paying. Since 75% of the borrowers’ interest payments go to Earn, the effective yield can exceed the average interest rate paid in a borrow market if less than 75% of the USDN supply is deposited to the respective Stability Pool. This yield amplification sets Liquity V2 apart from competitors and money markets where lending rates cannot be higher than borrow rates.
+The yield is a representation of the rates borrowers are paying. Since 75% of the borrowers' interest payments go to Earn, the effective yield can exceed the average interest rate paid in a borrow market if less than 75% of the USDN supply is deposited to the respective Stability Pool. This yield amplification sets Liquity V2 apart from competitors and money markets where lending rates cannot be higher than borrow rates.
 
 Check historic rates on Liquity V2 [here](https://dune.com/liquity/liquity-v2#interest-rates).
 
@@ -64,7 +67,7 @@ Check historic rates on Liquity V2 [here](https://dune.com/liquity/liquity-v2#in
 
 The goals are to:
 
-* Establish separate borrow markets for different collateral assets with their own market driven interest rates, using the Stability Pool backing to dynamically split redemptions across the available collaterals (link to “Redemption”).
+* Establish separate borrow markets for different collateral assets with their own market driven interest rates, using the Stability Pool backing to dynamically split redemptions across the available collaterals (link to "Redemption").
 * Compartmentalize the risks as much as possible when depositing to the respective Stability Pools (Earn) by giving the depositors control over which collateral assets they want exposure to in case of liquidations.
 
 ### How have Stability Pools evolved in Liquity based systems like Nerite, from Liquity V1 to V2?
