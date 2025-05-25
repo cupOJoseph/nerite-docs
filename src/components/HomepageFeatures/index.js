@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/green.png').default,
     description: (
       <>
-        USDN is a streaming super-token stablecoin built with the Superfluid protocol.
+        USND is a streaming super-token stablecoin built with the Superfluid protocol.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/red.png').default,
     description: (
       <>
-        USDN yield is sustainable and comes from multiple sources. 100% of protocol revenue is directed towards users.
+        USND yield is sustainable and comes from multiple sources. 100% of protocol revenue is directed towards users.
       </>
     ),
   },

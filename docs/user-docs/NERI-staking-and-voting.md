@@ -18,7 +18,7 @@ Holders have the power to:
 
 
 NERI holders do NOT have the power to:
-- Mint new USDN or control user Troves.
+- Mint new USND or control user Troves.
 - Upgrade the protocol or change the rules.
 - Add new collateral types.
 - Change the split or behavior of protocol interest payment fees.
